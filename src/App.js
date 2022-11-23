@@ -3,21 +3,18 @@ import styled from "styled-components";
 const Father = styled.div`
   display: flex;
 `;
-const Box = styled.div`
-  background-color: ${(props) => props.bgColor};
-  width: 100px;
-  height: 100px;
-`;
-// styled(Box) <- Box의 모든 속성을 들고 온 다음 ``(백틱)의 CSS를 추가한다.
-const Circle = styled(Box)` 
-  border-radius: 50px;
-`;
+const Btn = styled.button`
+  color: white;
+  background-color: coral;
+  border: 0;
+  border-radiusL 15px;
+`
 
 function App() {
   return (
     <Father>
-      <Box bgColor="teal" />
-      <Circle bgColor="coral" />
+      <Btn>Log in</Btn>
+      <Btn as="a">Log in</Btn>
     </Father>
   );
 }
